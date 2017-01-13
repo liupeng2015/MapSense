@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>  Upload the File ! </h1>
+	<form method="post" enctype="multipart/form-data">
+	
+	{{uf.as_p}}
+    <input type="submit" value="ok"/>	
+	</form>
+		 {% for k,v in testhehe.items %}
+	         <div>
+	         {{k}} ----------------------------------------------	</br>
+	          
+	              {% for i in v %}
+	                       {{i}}	</br>
+	                 {% endfor %}
+	 		
+	          ----------------------------------------------	</br>
+	 			</div>
+	      {% endfor %}
+</body>
+</html>

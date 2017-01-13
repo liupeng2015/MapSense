@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Information</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+         <META HTTP-EQUIV = "pragma" CONTENT="no-cache">
+          <META HTTP-EQUIV = "Cache-Control" CONTENT="no-cache,must-revalidate"> 
+          <META HTTP-EQUIV = "expires" CONTENT="0">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <style type="text/css">
+        label.error {
+            color: #fda032;
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            left: 45%;
+            width: 200px;
+            text-align: center;
+            margin-top: -28px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--详情框-->
+<div class="detail-top">
+    <span class="detail-tit">Information</span>
+</div>
+<div class="detail-box">
+    <form class="detail-form" id="detail-form" action="/project/" method="post">
+        <span>Project Name</span><input type="text" id="project-name" name="projectname">
+        <label for="project-name" class="close">×</label>
+        <span>DataBase IP</span><input type="text" id="database-ip" name="dbip">
+        <label for="database-ip" class="close">×</label>
+        <span>DataBase User</span><input type="text" id="database-user" name="dbuser">
+        <label for="database-user" class="close">×</label>
+        <span>DataBase Password</span><input type="text" id="database-pwd" name="dbpwd">
+        <label for="database-pwd" class="close">×</label>
+        <button class="detail-btn"> Submit</button>
+        <button class="detail-btn" type="reset" id="detail-reset">Reset</button>
+    </form>
+</div>
+   
+
+<script type="text/javascript" src="/static/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.validate-1.13.1.js"></script>
+<script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+</html>

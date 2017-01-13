@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/css/e-emulation-modes-warning.js"></script>
+<script language="JavaScript">
+<!--
+	function $( str_idName ){
+		return document.getElementById( str_idName );
+	}
+	function fun(obj){
+	    
+		obj.className='active'
+		
+		var leftbar = $('sidebar');
+		//childNodes
+		//var obj_lis = leftbar.getElementsByTagName('li');
+		var obj_lis = document.getElementById('leftbars').childNodes;
+
+		for( var int_i = 0; int_i < obj_lis.length; int_i++ ){
+
+			if( obj_lis[int_i] == obj ){
+			
+				obj_lis[int_i].className = 'active';
+			}
+			else{
+				obj_lis[int_i].className = '';
+			}
+		}
+	}
+//-->
+</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style>
+	.footer {
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+	text-align: center;
+	}
+	
+	.container .text-muted {
+    margin: 20px 0;
+    }
+
+
+	
+	
+	</style>
+	
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MapSense</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+<!-- 标题头-->
+
+
+    <div class="container-fluid">
+	
+      <div class="row">
+
+	  <div class="col-sm-1 sidebar">
+          <ul class="nav nav-sidebar" id="leftbars">
+			<li role="presentation" ><a href="firstpage.html"  target="texta" onclick="fun(this.parentNode);" >Home</a></li>
+			<li role="presentation" class="active"><a target="texta" href="http://www.baidu.com"  onclick="fun(this.parentNode);" >DataSet</a></li>
+			<li role="presentation"><a href="#"  onclick="fun(this.parentNode);" >StyleSet</a></li>
+			<li role="presentation"><a href="#"  onclick="fun(this.parentNode);" >MapSet</a></li>
+          <!--  -->
+		  </ul>		  
+        </div>  <!-- 左侧 -->
+
+		
+
+        <div class="col-sm-7 col-sm-offset-1 main">
+          <h1 class="page-header"> DataSet </h1>
+		  
+		  <div class="row placeholder">
+		   <div class="col-sm-1">
+		   </div>
+		   <!--style="background-color:#24eeec"-->
+		   <div class="col-sm-11" >
+      
+	
+</br></br>
+<!-- role="form"    don`t know -->
+<form class="form-horizontal"  action="/new/createfile/" method="post">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Project Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label" >DB IP</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="dbip" id="dbip" placeholder="Database IP">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">DB Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="dbuser" id="dbuser" placeholder="Database name">
+    </div>
+  </div>
+  
+    <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">DB Password</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="dbpwd" id="dbpwd" placeholder="Database Password">
+    </div>
+  </div>
+  
+  
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default"> Create Project</button>
+    </div>
+  </div>
+</form>	
+	
+</br>
+
+		
+
+		   </div>
+
+         </div>
+         
+
+		
+
+        </div>
+
+		
+	
+		<div class="col-sm-4" >
+					<div class="row">
+						
+						<div class="col-sm-2" style="border:1px">
+
+					   </div>
+					   <!--style="text-align:center;"-->
+					   <div class="col-sm-8" >
+						<h5 class="page-header"> Account </h5>
+						
+						Hello, {{request.session.user}}! Welcome to the MapSense!  </br></br>
+						
+						<img src="/static/images/touxiang.jpg" alt="..." class="img-rounded" style="width:120px;height:120px;"> </br></br>
+					    <button type="button" class="btn btn-primary">主页</button>
+					   </div>
+					   
+					   <div class="col-sm-2">
+				
+					   </div>
+					</div>
+
+	  
+
+									<div class="row">
+						
+						<div class="col-sm-2" style="border:1px">
+					   
+					
+					   </div>
+					   
+					   <div class="col-sm-8">
+						<h5 class="page-header"> Help </h5>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a>  </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a>  </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a>  </br>
+						
+					   </div>
+					   
+					   <div class="col-sm-2">
+					   
+					
+					   </div>
+					</div>
+					
+
+
+						<div class="row">
+						
+						<div class="col-sm-2" style="border:1px">
+					   
+					
+					   </div>
+					   
+					   <div class="col-sm-8">
+						<h5 class="page-header"> Blog </h5>
+						<h6> zhang </h6>
+						 Bring your maps to life with Runtime Styling on mobile</br>
+						<h6> wang </h6>
+						Bring your maps to life with Runtime Styling on mobile</br>
+						<h6> zhao </h6>
+						Bring your maps to life with Runtime Styling on mobile</br>
+						
+						</br>
+					   </div>
+					   
+					   <div class="col-sm-2">
+					   
+					
+					   </div>
+					</div>
+					
+					
+      </div>
+    </div>
+
+	</div>
+
+	
+   <div class="footer">
+      <div class="container">
+        <p class="text-muted">版权所有：吉林大学计算机科学与技术学院 </br></br>  电话：12233334444     邮箱：sdfj@gmai.com.cn </p>
+	
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/css/js/bootstrap.min.js"></script>
+    <script src="/static/css/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

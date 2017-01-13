@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>log</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+		<style>
+				.mask{
+				position:absolute;
+				top:0px;
+				filter:alpha(opacity=60);azimuth: 
+				background-color:#777;
+				opacity:0.5;
+				-moz-opacity:0.5;
+				}
+	
+		</style>
+
+</head>
+<body>
+<div id="mask" class="mask">
+	
+</div>
+<!--Log-->
+<div class="log-top">
+    <span class="log-tit">Log</span>
+</div>
+<div class="log-box">
+     {% for k,v in testhehe.items %}
+      <div class="log-card">
+        <span class="log-num"> No.{{k}}</span>
+        <div class="log-content">
+         {% for i in v %}
+	                       {{i}}	</br>
+	          {% endfor %}
+        </div>
+    </div>
+	      {% endfor %}
+	      
+</div>
+   
+
+<script type="text/javascript" src="/static/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.validate-1.13.1.js"></script>
+<script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+</html>

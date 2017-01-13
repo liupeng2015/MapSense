@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/js/e-emulation-modes-warning.js"></script>
+<script language="JavaScript">
+<!--
+	function $( str_idName ){
+		return document.getElementById( str_idName );
+	}
+	function fun(obj){
+	    
+		obj.className='active'
+		
+		var leftbar = $('sidebar');
+		//childNodes
+		//var obj_lis = leftbar.getElementsByTagName('li');
+		var obj_lis = document.getElementById('leftbars').childNodes;
+
+		for( var int_i = 0; int_i < obj_lis.length; int_i++ ){
+
+			if( obj_lis[int_i] == obj ){
+			
+				obj_lis[int_i].className = 'active';
+			}
+			else{
+				obj_lis[int_i].className = '';
+			}
+		}
+	}
+//-->
+</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style>
+	.footer {
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+	text-align: center;
+	}
+	
+	.container .text-muted {
+    margin: 20px 0;
+    }
+
+
+	
+	
+	</style>
+	
+  </head>
+
+  <body>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="padding-top:100px;padding-bottom:100px;padding-left:100px;padding-right:100px;">
+
+<!--  role="form" -->
+<form  action="/new/creatdata/" enctype="multipart/form-data" method="post">
+
+  <div class="form-group">
+<select class="form-control" name="hiddenvalue"> 
+   {% for pro in prolist %}
+   
+  <option value="{{pro}}">{{ pro }}</option>
+  
+    {% endfor %}
+</select>
+ 
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Building</label>
+    <input type="input" class="form-control" name="build-num" id="exampleInputEmail1" placeholder="Enter Building">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Floor</label>
+    <input type="input" class="form-control" name="floor-num" id="exampleInputPassword1" placeholder="Enter Floor">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile" name="file-up">
+    <p class="help-block">File Constrain here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+    </div>
+  </div>
+</div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MapSense</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+	
+      <div class="row">
+        <div class="col-sm-1 sidebar">
+          <ul class="nav nav-sidebar" id="leftbars">
+			<li role="presentation" ><a href="/new/welcome/"  target="_self" onclick="fun(this.parentNode);" >Home</a></li>
+			<li role="presentation" class="active"><a target="_self" href="/new/dataset/"  onclick="fun(this.parentNode);" >DataSet</a></li>
+			<li role="presentation"><a href="#"  target="_self" onclick="fun(this.parentNode);" >StyleSet</a></li>
+			<li role="presentation"><a href="#"  target="_self" onclick="fun(this.parentNode);" >MapSet</a></li>
+          <!--  -->
+		  </ul>
+		  
+
+		  
+        </div>
+
+		
+
+        <div class="col-sm-7 col-sm-offset-1 main">
+          <h1 class="page-header"> DataSet </h1>
+		  
+		  <div class="row placeholder">
+		   <div class="col-sm-1">
+		   </div>
+		   <!--style="background-color:#24eeec"-->
+		   <div class="col-sm-11" >
+      
+	<div class="row">
+
+  <div class="col-lg-8">
+    <div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  
+   
+  
+      <div class="col-lg-2">
+       <a href="/new/createpro/">  <button type="button" class="btn btn-primary" > New Project</button> </a>
+  </div><!-- /.col-lg-6 -->
+      <div class="col-lg-2">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"> Create building</button>
+  </div><!-- /.col-lg-6 -->
+  
+</div><!-- /.row -->
+</br></br>
+			<h5> 共有 {{setcount}} 个数据集 </h5>
+	        <table class="table">
+				<tbody>
+				<tr>  
+					<td> <strong>DataSet Name</strong> </td>
+					<td> <strong>Create time</strong> </td>
+					<td></td>
+					<td></td>
+					<td><strong>Operation </strong></td>
+				</tr>
+				
+				<tr>
+					<td> DataSet1 </td>
+					<td> 2008-01-01</td>
+					<td></td>
+					<td></td>
+						<td><div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						Action <span class="caret"></span>
+					</button>  
+					<ul class="dropdown-menu" role="menu">
+					
+						<li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"> 添加楼层 </a></li>
+						<li><a href="#"> 查看详情 </a></li>
+						<li><a href="#"> 创建楼层 </a></li>
+						<li><a href="http://www.baidu.com">等等</a></li>
+					</ul>
+	</div> </a> </td>
+				</tr>
+								
+				<tr>
+					<td> DataSet2 </td>
+					<td> 2018-02-01</td>
+					<td></td>
+					<td></td>
+						<td><div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						Action <span class="caret"></span>
+					</button>  
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://www.baidu.com">Action</a></li>
+						<li><a href="#">Action1</a></li>
+						<li><a href="#">Action2</a></li>
+						<li><a href="#">Action3</a></li>
+					</ul>
+	</div> </a> </td>
+				</tr>
+				{% for data in datasets %}
+
+				<tr>
+					<td> {{data.dproname}}_{{data.dbuild}}_{{data.dfloor}}</td>
+					<td> {{data.dtime}}</td>
+					<td></td>
+					<td></td>
+					<td><div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						Action <span class="caret"></span>
+					</button>  
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="http://www.baidu.com">Action</a></li>
+						<li><a href="#">Action1</a></li>
+						<li><a href="#">Action2</a></li>
+						<li><a href="#">Action3</a></li>
+					</ul>
+	</div> </a> </td>
+				</tr>
+		
+{% endfor %}
+				
+				<tbody>
+            </table>	
+	
+</br>
+<div  class="row">
+  <div class="col-lg-12">
+<nav>
+  <ul class="pagination">
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li class="unactive"><a href="#">2 </a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+		
+
+		   </div>
+
+         </div>
+         
+
+		
+
+        </div>
+
+		
+	
+		<div class="col-sm-4" >
+					<div class="row">
+						
+						<div class="col-sm-2" style="border:1px">
+
+					   </div>
+					   <!--style="text-align:center;"-->
+					   <div class="col-sm-8" >
+						<h5 class="page-header"> Account </h5>
+						
+						Hello, {{request.session.user}}! Welcome to the MapSense!  </br></br>
+						
+						<img src="/static/images/touxiang.jpg" alt="..." class="img-rounded" style="width:120px;height:120px;"> </br></br>
+					    <button type="button" class="btn btn-primary">主页</button>
+					   </div>
+					   
+					   <div class="col-sm-2">
+				
+					   </div>
+					</div>
+					
+      </div>
+	  
+	  <div class="col-sm-4" >
+					<div class="row">
+						
+						<div class="col-sm-2" style="border:1px">
+					   
+					
+					   </div>
+					   
+					   <div class="col-sm-8">
+						<h5 class="page-header"> Help </h5>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a>  </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a>  </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a> </br>
+						<a href="#"> How to use DataSet！ </a>  </br>
+						
+					   </div>
+					   
+					   <div class="col-sm-2">
+					   
+					
+					   </div>
+					</div>
+					
+      </div>
+	  
+	  	  <div class="col-sm-4" >
+					<div class="row">
+						
+						<div class="col-sm-2" style="border:1px">
+					   
+					
+					   </div>
+					   
+					   <div class="col-sm-8">
+						<h5 class="page-header"> Blog </h5>
+						<h6> zhang </h6>
+						 Bring your maps to life with Runtime Styling on mobile</br>
+						<h6> wang </h6>
+						Bring your maps to life with Runtime Styling on mobile</br>
+						<h6> zhao </h6>
+						Bring your maps to life with Runtime Styling on mobile</br>
+						
+						</br>
+					   </div>
+					   
+					   <div class="col-sm-2">
+					   
+					
+					   </div>
+					</div>
+					
+      </div>
+    </div>
+
+	</div>
+
+	
+   <div class="footer">
+      <div class="container">
+        <p class="text-muted">版权所有：吉林大学计算机科学与技术学院 </br></br>  电话：12233334444     邮箱：sdfj@gmai.com.cn </p>
+	
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/js/js/bootstrap.min.js"></script>
+    <script src="/static/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>  例子 </title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;	
+		font-size:12px;
+		font-family:����, Arial, Helvetica, sans-serif;
+		font-weight:bold;
+	}
+	#leftbar{
+		width:200px;
+		height:400px;
+		border:1px red solid;
+		float:left;
+	}
+	#context{
+		width:500px;
+		height:400px;
+		border:1px green solid;
+		float:left;
+	}
+	ul{
+		list-style-type:none;
+	}
+	li{
+		text-decoration:none;		
+	}
+	a,a:visited{
+		display:block;
+		line-height:26px;
+		height:26px;
+		border:1px orange solid;
+		text-align:center;
+		color:orange;
+		text-decoration:none;
+	}
+	a:hover{
+		background:maroon;
+		color:#fff;
+	}
+	iframe{
+		width:500px;
+		height:400px;
+	}
+	.tt{
+		background-color:red;
+		border:1px solid red;
+	}
+</style>
+</head>
+<body>
+<script language="JavaScript">
+<!--
+	function $( str_idName ){
+		return document.getElementById( str_idName );
+	}
+	function fun(obj){
+		var leftbar = $('leftbar');
+		var obj_lis = leftbar.getElementsByTagName('li');
+		for( var int_i = 0; int_i < obj_lis.length; int_i++ ){
+			if( obj_lis[int_i] == obj ){
+				obj_lis[int_i].className = 'tt';
+			}
+			else{
+				obj_lis[int_i].className = '';
+			}
+		}
+	}
+//-->
+</script>
+<div id="leftbar">
+	<ul>
+		<li class=""><a href="http://www.163.com" target="textq" onclick="fun(this.parentNode);"> 网易 </a></li>
+		<li class=""><a href="http://www.sina.com" target="textq" onclick="fun(this.parentNode);"> 打发 </a></li>
+		<li class=""><a href="http://www.sohu.com" target="textq" onclick="fun(this.parentNode);">看看</a></li>
+		<li class=""><a href="http://www.163.com" target="texta" onclick="fun(this.parentNode);">百度</a></li>
+		<li class=""><a href="http://www.163.com" target="texta" onclick="fun(this.parentNode);">所示</a></li>
+		<li class="tt"><a href="http://www.163.com" target="texta" onclick="fun(this.parentNode);">点点滴滴</a></li>
+	</ul>	
+</div>
+<div id="context">
+	<iframe src="http://www.163.com" name="textq" frameborder="1" target="_self"></iframe>
+	
+	<iframe src="http://www.163.com" name="texta" frameborder="1" target="_self"></iframe>
+</div>
+
+
+</body></html>

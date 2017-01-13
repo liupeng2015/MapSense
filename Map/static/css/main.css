@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ccc;
+}
+/*登录*/
+.login, .logout{
+    position: absolute;
+    top: 0;
+    right: 100px;
+    background-color: #575757;
+    color: #f6f7f9;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+.login-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 450px;
+    height: 230px;
+    border-radius: 15px;
+    background-color: #575757;
+    box-shadow: 5px 5px 25px #666;
+    font-family: cursive;
+    margin-left: -225px;
+}
+.login-tit {
+    margin-left: 50px;
+    background-color: #fda032;
+    color: #000;
+    position: absolute;
+    top: -20px;
+    width: 115px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.login-error {
+    margin-left: 40px;
+    color: #FF0000;
+    position: absolute;
+    top: 180px;
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.login-form {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.mask {
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    display: none;
+}
+.login-form span {
+    text-align: right;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 20px;
+    letter-spacing: 2px;
+}
+.login-form input {
+    width: 220px;
+    height: 30px;
+    display: inline;
+    border-radius: 5px;
+    border: none;
+    margin-top: 25px;
+    padding: 3px;
+    font-size: 18px;
+}
+.user-input::-webkit-input-placeholder {
+    font-size: 14px;
+}
+.login-btn {
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    margin-top: 10px;
+    background-color: #575757;
+    border: none;
+    font-family: cursive;
+    display: block;
+    float: right;
+    width: 20%;
+    outline: none;
+}
+.login-btn:hover {
+    color: #fda032;
+}
+label.error {
+    color: #fda032;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    left: 35%;
+    padding-top: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+/*详细信息*/
+.detail-box {
+    width: 450px;
+    margin: 50px auto;
+    background-color: #575757;
+    color: #fff;
+    font-family: cursive;
+    font-size: 20px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px #666;
+    position: relative;
+}
+
+.detail-top {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 100px;
+    color: #fda032;
+    font-family: cursive;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.detail-form span {
+    width: 180px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+.detail-form input {
+    width: 200px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+}
+.detail-form .close {
+    font-size: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.detail-form .close:hover {
+    color: #fda032;
+}
+.detail-btn, .file-btn {
+    border: none;
+    outline: none;
+    background-color: #575757;
+    width: 150px;
+    height:50px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-family: cursive;
+    margin: 0 35px;
+    border-radius: 5px;
+}
+.detail-btn:hover, .file-btn:hover {
+    color: #fda032;
+}
+/*添加文件*/
+.file-box {
+    width: 450px;
+    margin: 50px auto;
+    position: relative;
+    font-family: cursive;
+    padding-bottom: 150px;
+}
+.file-top {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #fda032;
+    font-family: cursive;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.file-box .add-card {
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 55px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    background-color: #fda032;
+    cursor: pointer;
+    position: absolute;
+    right: -130px;
+    top: -2px;
+}
+.file-box .file-card {
+    background-color: #575757;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px #666;
+    padding: 20px 15px;
+    margin-bottom: 15px;
+}
+.file-box .card-close {
+    font-size: 20px;
+    margin: 0;
+    width: 20px;
+    height: 22px;
+    float: right;
+    margin-top: -20px;
+    cursor: pointer;
+}
+.file-box .card-close:hover {
+    color: #fda032;
+}
+.file-box span {
+    width: 150px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+.file-box input {
+    width: 200px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+}
+.file-box .file-wrap {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #edc432;
+    text-align: center;
+    font-size: 17px;
+}
+.file-box .file-wrap .file-up {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    font-size: 0;
+}
+.file-card .file-info {
+    width: 80px;
+    background-color: #575757;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    padding-left: 5px;
+    display: inline-block;/*保证能设置宽度*/
+    overflow: hidden;/*超出部分隐藏*/
+    text-overflow: ellipsis;/*超出部分省略号*/
+    white-space: nowrap;/*保证不自动换行*/
+}
+.file-card .file-warn {
+    color: #fda032;
+    overflow: visible;
+}
+.file-box .button-box {
+    margin-top: 30px;
+}
+/*日志*/
+.log-top {
+    width: 200px;
+    margin-top: 20px;
+    color: #fda032;
+    font-family: cursive;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.log-box {
+    width: 800px;
+    margin: 30px auto;
+    position: relative;
+    font-family: cursive;
+    padding-bottom: 150px;
+}
+.log-box .log-card {
+    background-color: #575757;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom-right-radius: 60px 60px;
+    box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 30px 25px;
+    margin-bottom: 35px;
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+}
+.log-box .log-card:before {
+    content:'';    
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    border-bottom-right-radius: 30px;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform:
+    rotate(-20deg)
+    skew(-40deg,-3deg)
+    translate(-13px,-13px);
+
+}
+.log-box .log-card:after {
+    content: '';
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(0deg)
+                        translate(-45px,-20px)
+                           skew(20deg);
+}
+.log-box .log-card .log-num {
+    width: 78px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fda032;
+    padding: 2px 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    top: -15px;
+    left: -38px;
+}

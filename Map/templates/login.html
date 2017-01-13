@@ -1,0 +1,33 @@
+<html>
+
+<title>
+	 
+</title>
+<head>
+
+</head>
+
+	<body>
+		 This is a haha!
+		 
+		<form method="post" name="loginform" id="loginform" action="/testanddel/" enctype="multipart/form-data">
+			姓名:<input name="name" > </input>
+			密码:<input name="pwd">  </input>
+			Image:<input name="img1" type="file"/>
+			<input type="submit" value="tijiao" > </input>
+	      <input type="button" value="daoAll" onclick = "diaoyong()"> </input>
+
+	      		</form>
+		  {% for k,v in testhehe.items %}
+	         <div>
+	         {{k}} ----------------------------------------------	</br>
+	          
+	              {% for i in v %}
+	                       {{i}}	</br>
+	                 {% endfor %}
+	 		
+	          ----------------------------------------------	</br>
+	 			</div>
+	      {% endfor %}
+	</body>
+</html>
